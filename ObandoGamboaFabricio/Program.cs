@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
     
 //servicio:
 builder.Services.AddDbContext<appDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL")));
 
 builder.Services.AddAuthentication("Cookies").AddCookie("Cookies", options =>
 {
