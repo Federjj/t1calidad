@@ -20,21 +20,28 @@ namespace ObandoGamboaFabricio.Models
         [StringLength(100)]
         public string Nombre { get; set; }
 
+        // Define la propiedad Descripción como obligatoria.
+        [Required]
+        [StringLength(500)]
+        public string Descripcion { get; set; }
+
         // Define la propiedad Precio como obligatoria.
         [Required]
         public decimal Precio { get; set; }
+
+        // Define la propiedad Stock como obligatoria para control de inventario.
+        [Required]
+        public int Stock { get; set; }
+
+        // Define la propiedad ImagenUrl para almacenar la ruta de la imagen del producto.
+        [StringLength(300)]
+        public string ImagenUrl { get; set; }
 
         // Define la relación con la tabla Categoria mediante una clave foránea.
         [ForeignKey("Categoria")]
         public int CategoriaId { get; set; }
         // Define la propiedad de navegación para acceder a la entidad relacionada Categoria.
         public Categoria Categoria { get; set; }
-
-        // Define la relación con la tabla Proveedor mediante una clave foránea.
-        [ForeignKey("Proveedor")]
-        public int ProveedorId { get; set; }
-        // Define la propiedad de navegación para acceder a la entidad relacionada Proveedor.
-        public Proveedor Proveedor { get; set; }
 
         // Define una colección de DetallePedido relacionada con el artículo.
         public ICollection<DetallePedido> DetallesPedido { get; set; }

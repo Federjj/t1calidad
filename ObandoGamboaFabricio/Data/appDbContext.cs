@@ -24,7 +24,6 @@ namespace ObandoGamboaFabricio.Data
         public DbSet<DetallePedido> DetallesPedido { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
 
         // Método para configurar las relaciones entre las entidades.
@@ -45,9 +44,6 @@ namespace ObandoGamboaFabricio.Data
                 // Configura la relación entre Articulo y Categoria.
                 e.HasOne(e => e.Categoria).WithMany(r => r.Articulos)
                 .HasForeignKey(e => e.CategoriaId);
-                // Configura la relación entre Articulo y Proveedor.
-                e.HasOne(e => e.Proveedor).WithMany(r => r.Articulos)
-                .HasForeignKey(e => e.ProveedorId);
             });
 
             modelBuilder.Entity<Pedido>(e =>

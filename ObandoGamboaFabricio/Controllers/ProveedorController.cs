@@ -24,13 +24,7 @@ namespace ObandoGamboaFabricio.Controllers
         }
 
         // Acción para mostrar la lista de proveedores.
-        [Authorize]
-        public async Task<IActionResult> Index()
-        {
-            // Obtiene la lista de proveedores desde la base de datos.
-            var proveedores = await _context.Proveedores.ToListAsync();
-            return View(proveedores);
-        }
+
 
         // Acción para mostrar la vista de creación de proveedores.
         [Authorize]
