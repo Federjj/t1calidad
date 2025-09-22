@@ -1,86 +1,102 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\",
+  "WorkspaceRootPath": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3930B48-2B3E-4B01-98E0-01423C4818B1}|UnitTesting\\UnitTesting.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\unittesting\\controllers\\accesocontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3930B48-2B3E-4B01-98E0-01423C4818B1}|UnitTesting\\UnitTesting.csproj|solutionrelative:unittesting\\controllers\\accesocontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{B3930B48-2B3E-4B01-98E0-01423C4818B1}|UnitTesting\\UnitTesting.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\unittesting\\controllers\\homecontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3930B48-2B3E-4B01-98E0-01423C4818B1}|UnitTesting\\UnitTesting.csproj|solutionrelative:unittesting\\controllers\\homecontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250922203750_Migra1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ObandoGamboaFabricio\\Migrations\\20250922203750_Migra1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3930B48-2B3E-4B01-98E0-01423C4818B1}|UnitTesting\\UnitTesting.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\unittesting\\unittesting.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B3930B48-2B3E-4B01-98E0-01423C4818B1}|UnitTesting\\UnitTesting.csproj|solutionrelative:unittesting\\unittesting.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\views\\articulo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\views\\articulo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\views\\articulo\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\views\\articulo\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\views\\articulo\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\views\\articulo\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\views\\articulo\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\views\\articulo\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\views\\articulo\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\controllers\\proveedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\controllers\\proveedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\controllers\\proveedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\controllers\\articulocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\controllers\\articulocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\controllers\\articulocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\migrations\\20250922163907_caca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\migrations\\20250922163907_caca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\migrations\\20250922163907_caca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\controllers\\accesocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\views\\acceso\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\views\\acceso\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\views\\acceso\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\views\\acceso\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\views\\acceso\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\views\\acceso\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\views\\acceso\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\feder\\desktop\\t3practico_obandogamboafabricio\\obandogamboafabricio\\migrations\\20250618150900_ultimamigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\migrations\\20250618150900_ultimamigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\migrations\\20250618150900_ultimamigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|c:\\users\\enzo\\downloads\\t1_cal_pru1\\obandogamboafabricio\\migrations\\20250922182050_cafearoma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE2777BC-2EC9-458A-A9FE-AE3ADCFF91F0}|ObandoGamboaFabricio\\ObandoGamboaFabricio.csproj|solutionrelative:obandogamboafabricio\\migrations\\20250922182050_cafearoma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,89 +114,136 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccesoControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\UnitTesting\\Controllers\\AccesoControllerTest.cs",
+              "RelativeDocumentMoniker": "UnitTesting\\Controllers\\AccesoControllerTest.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\UnitTesting\\Controllers\\AccesoControllerTest.cs*",
+              "RelativeToolTip": "UnitTesting\\Controllers\\AccesoControllerTest.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwCYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T20:41:18.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "20250922182050_cafearoma.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs",
-              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs",
-              "RelativeToolTip": "ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "20250922203750_Migra1.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250922203750_Migra1.cs",
+              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Migrations\\20250922203750_Migra1.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250922203750_Migra1.cs",
+              "RelativeToolTip": "ObandoGamboaFabricio\\Migrations\\20250922203750_Migra1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T18:20:50.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Articulo\\Index.cshtml",
-              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Articulo\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Articulo\\Index.cshtml",
-              "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Articulo\\Index.cshtml",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwCYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-22T18:20:28.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Articulo\\Delete.cshtml",
-              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Articulo\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Articulo\\Delete.cshtml",
-              "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Articulo\\Delete.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBUAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-22T18:20:20.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Articulo\\Create.cshtml",
-              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Articulo\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Articulo\\Create.cshtml",
-              "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Articulo\\Create.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-22T18:20:00.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProveedorController.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Controllers\\ProveedorController.cs",
-              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Controllers\\ProveedorController.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Controllers\\ProveedorController.cs",
-              "RelativeToolTip": "ObandoGamboaFabricio\\Controllers\\ProveedorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T18:19:30.131Z",
+              "WhenOpened": "2025-09-22T20:37:50.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "HomeControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\UnitTesting\\Controllers\\HomeControllerTest.cs",
+              "RelativeDocumentMoniker": "UnitTesting\\Controllers\\HomeControllerTest.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\UnitTesting\\Controllers\\HomeControllerTest.cs",
+              "RelativeToolTip": "UnitTesting\\Controllers\\HomeControllerTest.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T20:26:20.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UnitTesting",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\UnitTesting\\UnitTesting.csproj",
+              "RelativeDocumentMoniker": "UnitTesting\\UnitTesting.csproj",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\UnitTesting\\UnitTesting.csproj",
+              "RelativeToolTip": "UnitTesting\\UnitTesting.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-22T20:25:53.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Articulo\\Index.cshtml",
+              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Articulo\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Articulo\\Index.cshtml",
+              "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Articulo\\Index.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-22T18:20:28.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Articulo\\Delete.cshtml",
+              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Articulo\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Articulo\\Delete.cshtml",
+              "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Articulo\\Delete.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-22T18:20:20.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Articulo\\Create.cshtml",
+              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Articulo\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Articulo\\Create.cshtml",
+              "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Articulo\\Create.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-22T18:20:00.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProveedorController.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Controllers\\ProveedorController.cs",
+              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Controllers\\ProveedorController.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Controllers\\ProveedorController.cs",
+              "RelativeToolTip": "ObandoGamboaFabricio\\Controllers\\ProveedorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T18:19:30.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\appsettings.json",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\appsettings.json",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\appsettings.json",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\appsettings.json",
               "RelativeToolTip": "ObandoGamboaFabricio\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-18T15:09:12.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 23,
+              "Title": "20250922182050_cafearoma.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs",
+              "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs",
+              "RelativeToolTip": "ObandoGamboaFabricio\\Migrations\\20250922182050_cafearoma.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T18:20:50.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Program.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Program.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Program.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Program.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -189,24 +252,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "ArticuloController.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Controllers\\ArticuloController.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Controllers\\ArticuloController.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Controllers\\ArticuloController.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Controllers\\ArticuloController.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Controllers\\ArticuloController.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Controllers\\ArticuloController.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAUwNUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T18:17:02.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T18:17:02.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Acceso\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Acceso\\Index.cshtml",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Acceso\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Acceso\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Acceso\\Index.cshtml",
               "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Acceso\\Index.cshtml",
               "ViewState": "AgIAADQAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -214,11 +276,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\appsettings.Development.json",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\appsettings.Development.json",
               "RelativeToolTip": "ObandoGamboaFabricio\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -226,50 +288,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "20250922163907_caca.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Migrations\\20250922163907_caca.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250922163907_caca.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Migrations\\20250922163907_caca.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Migrations\\20250922163907_caca.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250922163907_caca.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Migrations\\20250922163907_caca.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T16:39:08.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T16:39:08.072Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "appDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Data\\appDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Data\\appDbContext.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Data\\appDbContext.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Data\\appDbContext.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Data\\appDbContext.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Data\\appDbContext.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T15:07:47.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T15:07:47.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Models\\Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Models\\Articulo.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Models\\Articulo.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Models\\Articulo.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Models\\Articulo.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Models\\Articulo.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAowAsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T18:13:02.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T18:13:02.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Acceso\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Acceso\\Login.cshtml",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Acceso\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Acceso\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Acceso\\Login.cshtml",
               "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Acceso\\Login.cshtml",
               "ViewState": "AgIAACgAAAAAAAAAAAAiwDkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -277,11 +336,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Registro.cshtml",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Acceso\\Registro.cshtml",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Acceso\\Registro.cshtml",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Views\\Acceso\\Registro.cshtml",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Views\\Acceso\\Registro.cshtml",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Views\\Acceso\\Registro.cshtml",
               "RelativeToolTip": "ObandoGamboaFabricio\\Views\\Acceso\\Registro.cshtml",
               "ViewState": "AgIAAC8AAAAAAAAAAAAcwD8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -289,11 +348,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Models\\Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Models\\Categoria.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Models\\Categoria.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Models\\Categoria.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Models\\Categoria.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -301,11 +360,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Pedido.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Models\\Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Models\\Pedido.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Models\\Pedido.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Models\\Pedido.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Models\\Pedido.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Models\\Pedido.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -313,11 +372,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "20250618150900_ultimaMigracion.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Migrations\\20250618150900_ultimaMigracion.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250618150900_ultimaMigracion.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Migrations\\20250618150900_ultimaMigracion.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Migrations\\20250618150900_ultimaMigracion.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Migrations\\20250618150900_ultimaMigracion.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Migrations\\20250618150900_ultimaMigracion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -325,11 +384,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "AccesoController.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Controllers\\AccesoController.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Controllers\\AccesoController.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Controllers\\AccesoController.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Controllers\\AccesoController.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Controllers\\AccesoController.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Controllers\\AccesoController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAG8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -337,11 +396,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Models\\Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "ObandoGamboaFabricio\\Models\\Cliente.cs",
-              "ToolTip": "C:\\Users\\Feder\\Desktop\\T3Practico_ObandoGamboaFabricio\\ObandoGamboaFabricio\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\ENZO\\Downloads\\T1_CAL_PRU1\\ObandoGamboaFabricio\\Models\\Cliente.cs",
               "RelativeToolTip": "ObandoGamboaFabricio\\Models\\Cliente.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
