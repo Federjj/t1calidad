@@ -1,0 +1,39 @@
+# Visual Studio
+.vs/
+.vs/VSWorkspaceState.json
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+# Resharper
+_ReSharper.*/
+*.[Ee]xternal[Ss]ources/
+# NuGet
+*.nupkg
+packages/
+*.obj
+*.pdb
+*.orig
+# Build artifacts
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+[Aa]rm64/
+[Aa]rm/
+x86/
+x64/
+[Tt]emp/
+# Visual Studio Code
+.vscode/
+# Test results
+TestResults/
+# Web deploy
+*.publish.json
+# Editor configuration
+.editorconfig
+# Log files
+*.log
+*.log.txt
+# Other temporary files
+*.tmp
+*.bak
