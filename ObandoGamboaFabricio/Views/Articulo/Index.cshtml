@@ -1,98 +1,352 @@
 @model IEnumerable<ObandoGamboaFabricio.Models.Articulo>
 @{
     ViewData["Title"] = "Productos - Café Aroma";
+    var rolUsuario = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value;
+    var esUsuarioNormal = rolUsuario == "2";
 }
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-</head>
-
-<body>
+<div class="container-fluid bg-light py-4">
     <div class="container">
-        <h2>Gestión de Productos - Café Aroma</h2>
-        <a asp-action="Create" class="btn btn-success mb-3">Crear Nuevo Producto</a>
+        @if (!esUsuarioNormal)
+        {
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Gestión de Productos - Café Aroma</h2>
+                <a asp-action="Create" class="btn btn-success">Crear Nuevo Producto</a>
+            </div>
+        }
+        else
+        {
+            <div class="text-center mb-4">
+                <h2 class="text-primary">🍵 Menú Café Aroma</h2>
+                <p class="lead">Selecciona tus productos favoritos</p>
+            </div>
 
-        <div class="table-responsive">
-            <table class="table table-striped table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Imagen</th>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Stock</th>
-                        <th>Categoría</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var articulo in Model)
-                    {
-                        <tr>
-                            <td>
-                                @if (!string.IsNullOrEmpty(articulo.ImagenUrl))
+            <!-- Barra de búsqueda y carrito para usuarios -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" id="searchInput" class="form-control"
+                               placeholder="Buscar productos por nombre o categoría..." />
+                        <button class="btn btn-outline-primary" type="button" onclick="buscarProductos()">
+                            🔍 Buscar
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <button class="btn btn-success" onclick="mostrarModalPedido()">
+                        🛒 Ver Carrito (<span id="carritoCount">0</span>)
+                    </button>
+                </div>
+            </div>
+        }
+
+        @if (esUsuarioNormal)
+        {
+            <!-- Vista tipo tarjetas para usuarios normales -->
+            <div class="row" id="productosGrid">
+                @foreach (var producto in Model.Where(a => a.Stock > 0).OrderBy(a => a.Categoria?.Nombre).ThenBy(a => a.Nombre))
+                {
+                    <div class="col-lg-4 col-md-6 mb-4 producto-item" data-categoria="@producto.Categoria?.Nombre" data-nombre="@producto.Nombre.ToLower()">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-img-top-container text-center p-3">
+                                @if (!string.IsNullOrEmpty(producto.ImagenUrl))
                                 {
-                                    <img src="@articulo.ImagenUrl" alt="@articulo.Nombre" class="img-thumbnail"
-                                        style="width: 80px; height: 80px; object-fit: cover;">
+                                    <img src="@producto.ImagenUrl" class="card-img-top producto-imagen" alt="@producto.Nombre"
+                                         style="height: 200px; object-fit: cover; border-radius: 8px;">
                                 }
                                 else
                                 {
                                     <div class="bg-light d-flex align-items-center justify-content-center"
-                                        style="width: 80px; height: 80px;">
-                                        <span class="text-muted">Sin imagen</span>
+                                         style="height: 200px; border-radius: 8px;">
+                                        <span class="text-muted">☕ Sin imagen</span>
                                     </div>
                                 }
-                            </td>
-                            <td>@articulo.Nombre</td>
-                            <td>@(articulo.Descripcion.Length > 50 ? articulo.Descripcion.Substring(0, 50) + "..." :
-                                                            articulo.Descripcion)</td>
-                            <td>S/. @articulo.Precio.ToString("0.00")</td>
-                            <td>
-                                <span class="@(articulo.Stock > 0 ? "text-success" : "text-danger") fw-bold">
-                                    @articulo.Stock
-                                </span>
-                            </td>
-                            <td>@articulo.Categoria?.Nombre</td>
-                            <td>
-                                @if (articulo.Stock > 0)
-                                {
-                                    <span class="badge bg-success">Disponible</span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-danger">Agotado</span>
-                                }
-                            </td>
-                            <td>
-                                <a asp-action="Edit" asp-route-id="@articulo.IdArticulo"
-                                    class="btn btn-primary btn-sm">Editar</a>
-                                <a asp-action="Delete" asp-route-id="@articulo.IdArticulo"
-                                    class="btn btn-danger btn-sm">Eliminar</a>
-                            </td>
+                            </div>
+                            
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-primary">@producto.Nombre</h5>
+                                <p class="card-text text-muted">@producto.Descripcion</p>
+                                
+                                <div class="mt-auto">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="h5 text-success mb-0">S/. @producto.Precio.ToString("0.00")</span>
+                                        <span class="badge bg-info">@producto.Categoria?.Nombre</span>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">
+                                            @if (producto.Stock > 10)
+                                            {
+                                                <span class="text-success">✓ Disponible</span>
+                                            }
+                                            else if (producto.Stock > 0)
+                                            {
+                                                <span class="text-warning">⚠ Últimas @producto.Stock unidades</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="text-danger">✗ Agotado</span>
+                                            }
+                                        </small>
+                                        
+                                        <button class="btn btn-primary btn-sm"
+                                                onclick="agregarAlCarrito(@producto.IdArticulo, '@producto.Nombre', @producto.Precio, @producto.Stock)"
+                                                @(producto.Stock == 0 ? "disabled" : "")>
+                                            🛒 Agregar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <!-- Vista tabla para administradores -->
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Categoría</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (var articulo in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(articulo.ImagenUrl))
+                                    {
+                                        <img src="@articulo.ImagenUrl" alt="@articulo.Nombre" class="img-thumbnail"
+                                            style="width: 80px; height: 80px; object-fit: cover;">
+                                    }
+                                    else
+                                    {
+                                        <div class="bg-light d-flex align-items-center justify-content-center"
+                                            style="width: 80px; height: 80px;">
+                                            <span class="text-muted">Sin imagen</span>
+                                        </div>
+                                    }
+                                </td>
+                                <td>@articulo.Nombre</td>
+                                <td>@(articulo.Descripcion.Length > 50 ? articulo.Descripcion.Substring(0, 50) + "..." : articulo.Descripcion)</td>
+                                <td>S/. @articulo.Precio.ToString("0.00")</td>
+                                <td>
+                                    <span class="@(articulo.Stock > 0 ? "text-success" : "text-danger") fw-bold">
+                                        @articulo.Stock
+                                    </span>
+                                </td>
+                                <td>@articulo.Categoria?.Nombre</td>
+                                <td>
+                                    @if (articulo.Stock > 0)
+                                    {
+                                        <span class="badge bg-success">Disponible</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Agotado</span>
+                                    }
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@articulo.IdArticulo"
+                                        class="btn btn-primary btn-sm">Editar</a>
+                                    <a asp-action="Delete" asp-route-id="@articulo.IdArticulo"
+                                        class="btn btn-danger btn-sm">Eliminar</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Modal para realizar pedido (solo para usuarios normales) -->
+@if (esUsuarioNormal)
+{
+    <div class="modal fade" id="pedidoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Realizar Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="pedidoForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del Cliente *</label>
+                            <input type="text" class="form-control" id="clienteNombre" required placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Dirección de Entrega</label>
+                            <input type="text" class="form-control" id="clienteDireccion" placeholder="Opcional">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Observaciones del Pedido</label>
+                            <textarea class="form-control" id="observaciones" rows="3" placeholder="Ej: Sin azúcar, extra caliente, etc."></textarea>
+                        </div>
+                        
+                        <h6>Productos en el carrito:</h6>
+                        <div id="carritoItems" class="mb-3">
+                            <!-- Los items del carrito se agregarán aquí dinámicamente -->
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong>Total: S/. <span id="totalPedido">0.00</span></strong>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" onclick="confirmarPedido()">Confirmar Pedido</button>
+                </div>
+            </div>
         </div>
     </div>
+}
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
+@section Scripts {
     <script>
+        let carrito = [];
+
+        // Función de búsqueda (solo para usuarios)
+        function buscarProductos() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const productos = document.querySelectorAll('.producto-item');
+            let encontrados = 0;
+
+            productos.forEach(producto => {
+                const nombre = producto.getAttribute('data-nombre');
+                const categoria = producto.getAttribute('data-categoria').toLowerCase();
+                
+                if (nombre.includes(searchTerm) || categoria.includes(searchTerm)) {
+                    producto.style.display = 'block';
+                    encontrados++;
+                } else {
+                    producto.style.display = 'none';
+                }
+            });
+        }
+
+        // Funciones del carrito (solo para usuarios)
+        function agregarAlCarrito(id, nombre, precio, stock) {
+            const itemExistente = carrito.find(item => item.id === id);
+            
+            if (itemExistente) {
+                if (itemExistente.cantidad < stock) {
+                    itemExistente.cantidad++;
+                } else {
+                    alert('No hay suficiente stock disponible');
+                    return;
+                }
+            } else {
+                carrito.push({ id, nombre, precio, cantidad: 1 });
+            }
+            
+            actualizarCarrito();
+            alert(`✅ ${nombre} agregado al carrito`);
+        }
+
+        function actualizarCarrito() {
+            const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+            document.getElementById('carritoCount').textContent = totalItems;
+        }
+
+        function mostrarModalPedido() {
+            if (carrito.length === 0) {
+                alert('El carrito está vacío. Agregue productos primero.');
+                return;
+            }
+
+            const carritoItems = document.getElementById('carritoItems');
+            carritoItems.innerHTML = '';
+            let total = 0;
+
+            carrito.forEach(item => {
+                const itemTotal = item.precio * item.cantidad;
+                total += itemTotal;
+
+                const itemHtml = `
+                    <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
+                        <div>
+                            <strong>${item.nombre}</strong>
+                            <br>
+                            <small class="text-muted">Cantidad: ${item.cantidad} x S/. ${item.precio.toFixed(2)}</small>
+                        </div>
+                        <span class="text-success">S/. ${itemTotal.toFixed(2)}</span>
+                    </div>
+                `;
+                carritoItems.innerHTML += itemHtml;
+            });
+
+            document.getElementById('totalPedido').textContent = total.toFixed(2);
+            $('#pedidoModal').modal('show');
+        }
+
+        function confirmarPedido() {
+            const clienteNombre = document.getElementById('clienteNombre').value;
+            const clienteDireccion = document.getElementById('clienteDireccion').value;
+            const observaciones = document.getElementById('observaciones').value;
+
+            if (!clienteNombre.trim()) {
+                alert('Por favor ingrese su nombre');
+                return;
+            }
+
+            // Convertir carrito a JSON
+            const productosJson = JSON.stringify(carrito);
+
+            // Enviar pedido al servidor
+            fetch('/Pedido/CrearDesdeMenu', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `clienteNombre=${encodeURIComponent(clienteNombre)}&clienteDireccion=${encodeURIComponent(clienteDireccion)}&observaciones=${encodeURIComponent(observaciones)}&productosJson=${encodeURIComponent(productosJson)}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('✅ ' + data.message);
+                    carrito = [];
+                    actualizarCarrito();
+                    $('#pedidoModal').modal('hide');
+                    // Limpiar formulario
+                    document.getElementById('clienteNombre').value = '';
+                    document.getElementById('clienteDireccion').value = '';
+                    document.getElementById('observaciones').value = '';
+                } else {
+                    alert('❌ ' + data.message);
+                }
+            })
+            .catch(error => {
+                alert('❌ Error al realizar el pedido: ' + error.message);
+            });
+        }
+
+        // Búsqueda en tiempo real
+        if (document.getElementById('searchInput')) {
+            document.getElementById('searchInput').addEventListener('input', buscarProductos);
+        }
+
+        // Mostrar mensajes de error
         $(document).ready(function () {
             @if (TempData["ErrorMessage"] != null)
-                {
-                    <text>
-                        alert('@Html.Raw(TempData["ErrorMessage"])');
-                    </text>
+            {
+                <text>
+                    alert('@Html.Raw(TempData["ErrorMessage"])');
+                </text>
             }
         });
     </script>
-</body>
+}
