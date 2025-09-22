@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ObandoGamboaFabricio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef6c6dee53af130ff9a2bd478c0978440c8ed935")]
 [assembly: System.Reflection.AssemblyProductAttribute("ObandoGamboaFabricio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ObandoGamboaFabricio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
