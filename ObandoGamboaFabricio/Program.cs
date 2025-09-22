@@ -5,10 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+    
 //servicio:
 builder.Services.AddDbContext<appDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSQL")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddAuthentication("Cookies").AddCookie("Cookies", options =>
 {
@@ -31,8 +31,6 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthentication();
-
-
 app.UseAuthorization();
 
 app.MapControllerRoute(
