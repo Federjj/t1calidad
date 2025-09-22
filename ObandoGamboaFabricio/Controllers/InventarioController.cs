@@ -21,7 +21,7 @@ namespace ObandoGamboaFabricio.Controllers
         {
             var inventario = await _context.Articulos
                 .Include(a => a.Categoria)
-                .Include(a => a.Proveedor)
+                
                 .ToListAsync();
 
             return View(inventario);

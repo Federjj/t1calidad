@@ -1,0 +1,150 @@
+@model IEnumerable<ObandoGamboaFabricio.Models.Pedido>
+@{
+    ViewData["Title"] = "Gestión de Pedidos - Café Aroma";
+}
+
+<div class="container">
+    <h2>Gestión de Pedidos - Café Aroma</h2>
+
+    <!-- Filtros de búsqueda -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <form asp-action="Buscar" method="get" class="d-flex">
+                <select name="estado" class="form-select me-2">
+                    <option value="">Todos los estados</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En Preparación">En Preparación</option>
+                    <option value="Listo">Listo</option>
+                    <option value="Entregado">Entregado</option>
+                    <option value="Cancelado">Cancelado</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Filtrar</button>
+            </form>
+        </div>
+        <div class="col-md-6 text-end">
+            <a asp-action="Create" class="btn btn-success">Nuevo Pedido</a>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Productos</th>
+                    <th>Total</th>
+                    <th>Observaciones</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pedido in Model)
+                {
+                    <tr>
+                        <td>@pedido.IdPedido</td>
+                        <td>@pedido.Cliente?.Nombre</td>
+                        <td>@pedido.FechaPedido.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>
+                            <span class="badge @GetEstadoBadgeClass(pedido.Estado)">@pedido.Estado</span>
+                        </td>
+                        <td>
+                            @if (pedido.DetallesPedido != null)
+                            {
+                                @string.Join(", ", pedido.DetallesPedido.Select(d => $"{d.articulo?.Nombre} x{d.Cantidad}"))
+                            }
+                        </td>
+                        <td>
+                            S/. @(pedido.DetallesPedido?.Sum(d => d.Cantidad * d.articulo?.Precio ?? 0).ToString("0.00") ??
+                                                    "0.00")
+                        </td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(pedido.Observaciones))
+                            {
+                                <span title="@pedido.Observaciones">
+                                    @(pedido.Observaciones.Length > 30 ? pedido.Observaciones.Substring(0, 30) + "..." :
+                                                                pedido.Observaciones)
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="text-muted">Sin observaciones</span>
+                            }
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a asp-action="Details" asp-route-id="@pedido.IdPedido"
+                                    class="btn btn-info btn-sm">Detalles</a>
+
+                                <!-- Dropdown para cambiar estado -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-warning btn-sm dropdown-toggle"
+                                        data-bs-toggle="dropdown">
+                                        Estado
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="cambiarEstado(@pedido.IdPedido, 'Pendiente')">Pendiente</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="cambiarEstado(@pedido.IdPedido, 'En Preparación')">En
+                                                Preparación</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="cambiarEstado(@pedido.IdPedido, 'Listo')">Listo</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="cambiarEstado(@pedido.IdPedido, 'Entregado')">Entregado</a></li>
+                                        <li><a class="dropdown-item" href="#"
+                                                onclick="cambiarEstado(@pedido.IdPedido, 'Cancelado')">Cancelado</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function cambiarEstado(pedidoId, nuevoEstado) {
+            if (confirm('¿Está seguro de cambiar el estado del pedido a "' + nuevoEstado + '"?')) {
+                fetch('/Pedido/CambiarEstado', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'id=' + pedidoId + '&nuevoEstado=' + encodeURIComponent(nuevoEstado)
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            location.reload();
+                        } else {
+                            alert('Error al cambiar el estado del pedido');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error al cambiar el estado del pedido');
+                    });
+            }
+        }
+    </script>
+}
+
+@functions {
+    public string GetEstadoBadgeClass(string estado)
+    {
+        return estado switch
+        {
+            "Pendiente" => "bg-secondary",
+            "En Preparación" => "bg-warning",
+            "Listo" => "bg-info",
+            "Entregado" => "bg-success",
+            "Cancelado" => "bg-danger",
+            _ => "bg-secondary"
+        };
+    }
+}

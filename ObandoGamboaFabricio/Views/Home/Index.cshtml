@@ -1,8 +1,307 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<ObandoGamboaFabricio.Models.Articulo>
+@{
+    ViewData["Title"] = "Café Aroma - Menú Principal";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bienvenido, Logeado Con éxito</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h1 class="display-4 text-primary">🍵 Café Aroma</h1>
+                <p class="lead">Deliciosos cafés y productos frescos para disfrutar</p>
+            </div>
+        </div>
+
+        <!-- Barra de búsqueda y carrito -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control"
+                        placeholder="Buscar productos por nombre o categoría..." />
+                    <button class="btn btn-outline-primary" type="button" onclick="buscarProductos()">
+                        🔍 Buscar
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6 text-end">
+                <button class="btn btn-success" onclick="mostrarModalPedido()">
+                    🛒 Realizar Pedido (<span id="carritoCount">0</span>)
+                </button>
+            </div>
+        </div>
+
+        <!-- Filtros por categoría -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary active" data-categoria="todos">Todos</button>
+                    @foreach (var categoria in ViewBag.Categorias as IEnumerable<ObandoGamboaFabricio.Models.Categoria>
+                                        ?? new List<ObandoGamboaFabricio.Models.Categoria>())
+                    {
+                        <button type="button" class="btn btn-outline-primary"
+                            data-categoria="@categoria.Nombre">@categoria.Nombre</button>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensaje de productos no encontrados -->
+        <div id="noResults" class="alert alert-warning text-center" style="display: none;">
+            <h4>😔 Producto no encontrado</h4>
+            <p>No encontramos productos que coincidan con tu búsqueda.</p>
+        </div>
+
+        <!-- Grid de productos -->
+        <div class="row" id="productosGrid">
+            @foreach (var producto in Model.Where(a => a.Stock > 0).OrderBy(a => a.Categoria?.Nombre).ThenBy(a =>
+                        a.Nombre))
+            {
+                <div class="col-lg-4 col-md-6 mb-4 producto-item" data-categoria="@producto.Categoria?.Nombre"
+                    data-nombre="@producto.Nombre.ToLower()">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-top-container text-center p-3">
+                            @if (!string.IsNullOrEmpty(producto.ImagenUrl))
+                            {
+                                <img src="@producto.ImagenUrl" class="card-img-top producto-imagen" alt="@producto.Nombre"
+                                    style="height: 200px; object-fit: cover; border-radius: 8px;">
+                            }
+                            else
+                            {
+                                <div class="bg-light d-flex align-items-center justify-content-center"
+                                    style="height: 200px; border-radius: 8px;">
+                                    <span class="text-muted">☕ Sin imagen</span>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-primary">@producto.Nombre</h5>
+                            <p class="card-text text-muted">@producto.Descripcion</p>
+
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="h5 text-success mb-0">S/. @producto.Precio.ToString("0.00")</span>
+                                    <span class="badge bg-info">@producto.Categoria?.Nombre</span>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">
+                                        @if (producto.Stock > 10)
+                                        {
+                                            <span class="text-success">✓ Disponible</span>
+                                        }
+                                        else if (producto.Stock > 0)
+                                        {
+                                            <span class="text-warning">⚠ Últimas @producto.Stock unidades</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-danger">✗ Agotado</span>
+                                        }
+                                    </small>
+
+                                    <button class="btn btn-primary btn-sm"
+                                        onclick="agregarAlCarrito(@producto.IdArticulo, '@producto.Nombre', @producto.Precio, @producto.Stock)"
+                                        @(producto.Stock == 0 ? "disabled" : "")>
+                                        🛒 Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
 </div>
+
+<!-- Modal para realizar pedido -->
+<div class="modal fade" id="pedidoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Realizar Pedido</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="pedidoForm">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre del Cliente</label>
+                        <input type="text" class="form-control" id="clienteNombre" required
+                            placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Dirección de Entrega</label>
+                        <input type="text" class="form-control" id="clienteDireccion" placeholder="Opcional">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Observaciones del Pedido</label>
+                        <textarea class="form-control" id="observaciones" rows="3"
+                            placeholder="Ej: Sin azúcar, extra caliente, etc."></textarea>
+                    </div>
+
+                    <h6>Productos en el carrito:</h6>
+                    <div id="carritoItems" class="mb-3">
+                        <!-- Los items del carrito se agregarán aquí dinámicamente -->
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong>Total: S/. <span id="totalPedido">0.00</span></strong>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" onclick="confirmarPedido()">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let carrito = [];
+
+        // Función de búsqueda
+        function buscarProductos() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const productos = document.querySelectorAll('.producto-item');
+            let encontrados = 0;
+
+            productos.forEach(producto => {
+                const nombre = producto.getAttribute('data-nombre');
+                const categoria = producto.getAttribute('data-categoria').toLowerCase();
+
+                if (nombre.includes(searchTerm) || categoria.includes(searchTerm)) {
+                    producto.style.display = 'block';
+                    encontrados++;
+                } else {
+                    producto.style.display = 'none';
+                }
+            });
+
+            document.getElementById('noResults').style.display = encontrados > 0 ? 'none' : 'block';
+        }
+
+        // Filtrado por categoría
+        document.querySelectorAll('[data-categoria]').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const categoria = this.getAttribute('data-categoria');
+
+                // Actualizar botones activos
+                document.querySelectorAll('[data-categoria]').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const productos = document.querySelectorAll('.producto-item');
+
+                productos.forEach(producto => {
+                    if (categoria === 'todos' || producto.getAttribute('data-categoria') === categoria) {
+                        producto.style.display = 'block';
+                    } else {
+                        producto.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Funciones del carrito
+        function agregarAlCarrito(id, nombre, precio, stock) {
+            const itemExistente = carrito.find(item => item.id === id);
+
+            if (itemExistente) {
+                if (itemExistente.cantidad < stock) {
+                    itemExistente.cantidad++;
+                } else {
+                    alert('No hay suficiente stock disponible');
+                    return;
+                }
+            } else {
+                carrito.push({ id, nombre, precio, cantidad: 1 });
+            }
+
+            actualizarCarrito();
+            alert(`✅ ${nombre} agregado al carrito`);
+        }
+
+        function actualizarCarrito() {
+            const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+            document.getElementById('carritoCount').textContent = totalItems;
+        }
+
+        function confirmarPedido() {
+            const clienteNombre = document.getElementById('clienteNombre').value;
+            const clienteDireccion = document.getElementById('clienteDireccion').value;
+            const observaciones = document.getElementById('observaciones').value;
+
+            if (!clienteNombre.trim()) {
+                alert('Por favor ingrese su nombre');
+                return;
+            }
+
+            // Convertir carrito a JSON
+            const productosJson = JSON.stringify(carrito);
+
+            // Enviar pedido al servidor
+            fetch('/Pedido/CrearDesdeMenu', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `clienteNombre=${encodeURIComponent(clienteNombre)}&clienteDireccion=${encodeURIComponent(clienteDireccion)}&observaciones=${encodeURIComponent(observaciones)}&productosJson=${encodeURIComponent(productosJson)}`
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('✅ ' + data.message);
+                        carrito = [];
+                        actualizarCarrito();
+                        $('#pedidoModal').modal('hide');
+                        // Limpiar formulario
+                        document.getElementById('clienteNombre').value = '';
+                        document.getElementById('clienteDireccion').value = '';
+                        document.getElementById('observaciones').value = '';
+                    } else {
+                        alert('❌ ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    alert('❌ Error al realizar el pedido: ' + error.message);
+                });
+        }
+
+        // Mostrar modal de pedido con los items del carrito
+        function mostrarModalPedido() {
+            if (carrito.length === 0) {
+                alert('El carrito está vacío. Agregue productos primero.');
+                return;
+            }
+
+            const carritoItems = document.getElementById('carritoItems');
+            carritoItems.innerHTML = '';
+            let total = 0;
+
+            carrito.forEach(item => {
+                const itemTotal = item.precio * item.cantidad;
+                total += itemTotal;
+
+                const itemHtml = `
+                        <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
+                            <div>
+                                <strong>${item.nombre}</strong>
+                                <br>
+                                <small class="text-muted">Cantidad: ${item.cantidad} x S/. ${item.precio.toFixed(2)}</small>
+                            </div>
+                            <span class="text-success">S/. ${itemTotal.toFixed(2)}</span>
+                        </div>
+                    `;
+                carritoItems.innerHTML += itemHtml;
+            });
+
+            document.getElementById('totalPedido').textContent = total.toFixed(2);
+            $('#pedidoModal').modal('show');
+        }
+
+        // Búsqueda en tiempo real
+        document.getElementById('searchInput').addEventListener('input', buscarProductos);
+    </script>
+}
