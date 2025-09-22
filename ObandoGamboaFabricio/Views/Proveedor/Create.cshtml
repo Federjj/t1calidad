@@ -1,0 +1,21 @@
+@model ObandoGamboaFabricio.Models.Proveedor
+@{
+    ViewData["Title"] = "Crear Proveedor";
+}
+
+<h2>Crear Proveedor</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Direccion" class="control-label"></label>
+        <input asp-for="Direccion" class="form-control" />
+        <span asp-validation-for="Direccion" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-controller="Acceso" asp-action="ListaArti" class="btn btn-secondary">Cancelar</a>
+</form>

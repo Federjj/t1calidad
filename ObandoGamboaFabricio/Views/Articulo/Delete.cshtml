@@ -1,0 +1,30 @@
+@model ObandoGamboaFabricio.Models.Articulo
+@{
+    ViewData["Title"] = "Eliminar Articulo";
+}
+
+<h2>Eliminar Articulo</h2>
+
+<div class="alert alert-danger" role="alert">
+    ¿Estás seguro de que deseas eliminar este Articulo?
+</div>
+
+<div>
+    <h4>Articulo</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+        <dt class="col-sm-2">Precio</dt>
+        <dd class="col-sm-10">@Model.Precio</dd>
+        <dt class="col-sm-2">Categoría</dt>
+        <dd class="col-sm-10">@Model.Categoria.Nombre</dd>
+        <dt class="col-sm-2">Proveedor</dt>
+        <dd class="col-sm-10">@Model.Proveedor.Nombre</dd>
+    </dl>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="IdArticulo" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

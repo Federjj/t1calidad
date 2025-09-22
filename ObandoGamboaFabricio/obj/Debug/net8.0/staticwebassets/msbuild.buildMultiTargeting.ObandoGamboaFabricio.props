@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ObandoGamboaFabricio.props" />
+</Project>

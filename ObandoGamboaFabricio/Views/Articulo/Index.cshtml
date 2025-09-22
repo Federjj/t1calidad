@@ -1,0 +1,61 @@
+@model IEnumerable<ObandoGamboaFabricio.Models.Articulo>
+@{
+    ViewData["Title"] = "Articulos";
+}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <h2>Articulos</h2>
+    <a asp-action="Create" class="btn btn-success">Crear Nuevo Articulo</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Proveedor</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var articulo in Model)
+            {
+                <tr>
+                    <td>@articulo.Nombre</td>
+                    <td>@articulo.Precio</td>
+                    <td>@articulo.Categoria.Nombre</td>
+                    <td>@articulo.Proveedor.Nombre</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@articulo.IdArticulo" class="btn btn-primary btn-sm">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@articulo.IdArticulo" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <text>
+                        alert('@Html.Raw(TempData["ErrorMessage"])');
+            </text>
+        }
+            });
+    </script>
+</body>
+

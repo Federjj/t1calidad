@@ -1,0 +1,70 @@
+@model ObandoGamboaFabricio.ViewModels.UsuarioVM
+
+@{
+    ViewData["Title"] = "Crear Usuario (Administrador)";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Usuarios</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="row mt-5 justify-content-center">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    Agregar Usuarios
+                </div>
+                <div class="card-body">
+                    <form asp-controller="Acceso" asp-action="Create" method="post">
+                        <div class="mb-3">
+                            <label asp-for="NombreVM" class="form-label">Nombre</label>
+                            <input asp-for="NombreVM" class="form-control" name="NombreVM" placeholder="Ingrese el nombre" type="text" required />
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="ApellidoVM" class="form-label">Nombre</label>
+                            <input asp-for="ApellidoVM" class="form-control" name="ApellidoVM" placeholder="Ingrese el nombre" type="text" required />
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="CorreoVM" class="form-label">Correo</label>
+                            <input asp-for="CorreoVM" class="form-control" name="CorreoVM" placeholder="Ingrese el email" type="text" required />
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="RolID_VM" class="form-label">Rol</label>
+                            <select asp-for="RolID_VM" name="RolID_VM" class="form-select mb-3" required>
+                                <option value="1">Admin</option>
+                                <option value="2">Usuario</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="PasswordVM" class="form-label">Contraseña</label>
+                            <input asp-for="PasswordVM" class="form-control" name="PasswordVM" placeholder="Ingrese la contrasena" type="password" required />
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success">Guardar</button>
+                        </div>
+                        @if (ViewData["Error"] != null)
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @ViewData["Error"];
+                            </div>
+                        }
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

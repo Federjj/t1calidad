@@ -1,0 +1,16 @@
+@model ObandoGamboaFabricio.Models.Categoria
+@{
+    ViewData["Title"] = "Crear Categoría";
+}
+
+<h2>Crear Categoría</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-controller="Acceso" asp-action="ListaArti" class="btn btn-secondary">Cancelar</a>
+</form>

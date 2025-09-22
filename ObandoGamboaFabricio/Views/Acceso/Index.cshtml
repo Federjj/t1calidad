@@ -1,0 +1,71 @@
+@model IEnumerable<ObandoGamboaFabricio.Models.Usuarios>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+    
+    <div class="container mt-5">
+        <h2>Usuarios</h2>
+        <div class="mb-3">
+            <a asp-action="Create" class="btn btn-success">Crear Nuevo Usuario</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var usuarios in Model)
+                {
+                    <tr>
+                        <td>@usuarios.IdUsuario</td>
+                        <td>@usuarios.Nombre</td>
+                        <td>@usuarios.Correo</td>
+                        <td>@usuarios.Rol.Nombre</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@usuarios.IdUsuario"
+                                class="btn btn-primary btn-sm">Editar</a>
+                            <form asp-action="Delete" asp-route-id="@usuarios.IdUsuario" method="post"
+                                style="display:inline;">
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            @if (TempData["ErrorMessage"] != null)
+                {
+                    <text>
+                        alert('@Html.Raw(TempData["ErrorMessage"])');
+                    </text>
+            }
+    });
+    </script>
+</body>
+
+</html>
