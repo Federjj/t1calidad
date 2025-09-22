@@ -1186,3 +1186,4 @@ C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\
 C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.pdb
 C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.genruntimeconfig.cache
 C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\Debug\net8.0\ref\ObandoGamboaFabricio.dll
+C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.sourcelink.json

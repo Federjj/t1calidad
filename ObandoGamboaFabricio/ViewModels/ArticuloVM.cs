@@ -15,16 +15,25 @@ namespace ObandoGamboaFabricio.ViewModels
         [StringLength(100)]
         public string Nombre { get; set; }
 
+        // Define la propiedad Descripción como obligatoria.
+        [Required]
+        [StringLength(500)]
+        public string Descripcion { get; set; }
+
         // Define la propiedad Precio como obligatoria.
         [Required]
         public decimal Precio { get; set; }
 
+        // Define la propiedad Stock como obligatoria para control de inventario.
+        [Required]
+        public int Stock { get; set; }
+
+        // Define la propiedad ImagenUrl para almacenar la ruta de la imagen del producto.
+        [StringLength(300)]
+        public string ImagenUrl { get; set; }
+
         // Define la propiedad CategoriaId como obligatoria, que almacena el identificador de la categoría.
         [Required]
         public int CategoriaId { get; set; }
-
-        // Define la propiedad ProveedorId como obligatoria, que almacena el identificador del proveedor.
-        [Required]
-        public int ProveedorId { get; set; }
     }
 }

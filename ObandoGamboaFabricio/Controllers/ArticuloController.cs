@@ -32,7 +32,7 @@ namespace ObandoGamboaFabricio.Controllers
             // Obtiene la lista de artículos incluyendo sus categorías y proveedores.
             var articulos = await _context.Articulos
                 .Include(a => a.Categoria)
-             
+
                 .ToListAsync();
             return View(articulos);
         }
@@ -49,7 +49,7 @@ namespace ObandoGamboaFabricio.Controllers
         {
             // Obtiene las listas de categorías y proveedores para mostrarlas en la vista.
             ViewBag.Categorias = _context.Categorias.ToList();
-            
+
             return View();
         }
 
@@ -65,9 +65,11 @@ namespace ObandoGamboaFabricio.Controllers
                 Models.Articulo articulo = new Models.Articulo
                 {
                     Nombre = articuloVM.Nombre,
+                    Descripcion = articuloVM.Descripcion,
                     Precio = articuloVM.Precio,
-                    CategoriaId = articuloVM.CategoriaId,
-                    
+                    Stock = articuloVM.Stock,
+                    ImagenUrl = articuloVM.ImagenUrl,
+                    CategoriaId = articuloVM.CategoriaId
                 };
 
                 // Agrega el artículo a la base de datos.
@@ -78,7 +80,7 @@ namespace ObandoGamboaFabricio.Controllers
 
             // Si el modelo no es válido, recarga las listas de categorías y proveedores.
             ViewBag.Categorias = _context.Categorias.ToList();
-         
+
             return RedirectToAction("Index", "Articulo");
         }
 
@@ -100,14 +102,16 @@ namespace ObandoGamboaFabricio.Controllers
             {
                 IdArticulo = articulo.IdArticulo,
                 Nombre = articulo.Nombre,
+                Descripcion = articulo.Descripcion,
                 Precio = articulo.Precio,
-                CategoriaId = articulo.CategoriaId,
-       
+                Stock = articulo.Stock,
+                ImagenUrl = articulo.ImagenUrl,
+                CategoriaId = articulo.CategoriaId
             };
 
             // Obtiene las listas de categorías y proveedores para mostrarlas en la vista.
             ViewBag.Categorias = _context.Categorias.ToList();
-           
+
 
             return View(articuloVM);
         }
@@ -129,9 +133,11 @@ namespace ObandoGamboaFabricio.Controllers
 
                 // Actualiza los datos del artículo.
                 articulo.Nombre = articuloVM.Nombre;
+                articulo.Descripcion = articuloVM.Descripcion;
                 articulo.Precio = articuloVM.Precio;
+                articulo.Stock = articuloVM.Stock;
+                articulo.ImagenUrl = articuloVM.ImagenUrl;
                 articulo.CategoriaId = articuloVM.CategoriaId;
-        
 
                 // Guarda los cambios en la base de datos.
                 _context.Articulos.Update(articulo);
@@ -141,7 +147,7 @@ namespace ObandoGamboaFabricio.Controllers
 
             // Si el modelo no es válido, recarga las listas de categorías y proveedores.
             ViewBag.Categorias = _context.Categorias.ToList();
-  
+
             return View(articuloVM);
         }
 
@@ -182,7 +188,7 @@ namespace ObandoGamboaFabricio.Controllers
 
             // Si el modelo no es válido, recarga las listas de categorías y proveedores.
             ViewBag.Categorias = _context.Categorias.ToList();
-   
+
             return RedirectToAction("Index", "Articulo");
         }
 
@@ -205,7 +211,7 @@ namespace ObandoGamboaFabricio.Controllers
                 // Busca el artículo por su ID incluyendo su categoría y proveedor.
                 var articulo = await _context.Articulos
                     .Include(a => a.Categoria)
-            
+
                     .FirstOrDefaultAsync(m => m.IdArticulo == id);
                 if (articulo == null)
                 {
