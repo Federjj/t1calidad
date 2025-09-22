@@ -1187,3 +1187,16 @@ C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\
 C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.genruntimeconfig.cache
 C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\Debug\net8.0\ref\ObandoGamboaFabricio.dll
 C:\Users\Feder\Desktop\T3Practico_ObandoGamboaFabricio\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.sourcelink.json
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.csproj.AssemblyReference.cache
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.AssemblyInfoInputs.cache
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.AssemblyInfo.cs
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.csproj.CoreCompileInputs.cache
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.RazorAssemblyInfo.cache
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.RazorAssemblyInfo.cs
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.sourcelink.json
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.dll
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\refint\ObandoGamboaFabricio.dll
+C:\Users\KEVIN\Source\Repos\t1calidad2\ObandoGamboaFabricio\obj\Debug\net8.0\ObandoGamboaFabricio.pdb
