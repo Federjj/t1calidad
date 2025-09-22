@@ -1,0 +1,133 @@
+﻿@model ObandoGamboaFabricio.ViewModels.PedidoVM;
+
+@{
+    ViewData["Title"] = "Pedidos";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <h1 class="text-center mb-4">Gestión de Pedidos ☕</h1>
+
+            <div class="card shadow-sm mb-5">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Crear Nuevo Pedido</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="CrearPedido" method="post">
+                        <div class="form-group mb-3">
+                            <label for="clienteId" class="form-label">Cliente</label>
+                            <select id="clienteId" name="ClienteId" class="form-control" required>
+                                <option value="">Seleccione un cliente...</option>
+                                @foreach (var cliente in Model.Clientes)
+                                {
+                                    <option value="@cliente.IdCliente">@cliente.Nombre</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div id="articulos-container" class="mb-3">
+                            <h6>Artículos del Pedido</h6>
+                            <div class="input-group mb-2 articulo-row d-none">
+                                <select name="IdArticulo" class="form-control select-articulo me-2">
+                                    <option value="">Seleccione un artículo...</option>
+                                    @foreach (var articulo in Model.Articulos)
+                                    {
+                                        <option value="@articulo.IdArticulo" data-precio="@articulo.Precio">@articulo.Nombre (@articulo.Precio.ToString("C"))</option>
+                                    }
+                                </select>
+                                <input type="number" name="Cantidad" class="form-control input-cantidad me-2" placeholder="Cantidad" min="1" required>
+                                <button type="button" class="btn btn-outline-danger btn-eliminar-articulo">X</button>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-success btn-sm mb-3" id="btn-agregar-articulo">
+                            <i class="bi bi-plus-lg"></i> Agregar Artículo
+                        </button>
+
+                        <div class="form-group mb-3">
+                            <label for="observaciones" class="form-label">Observaciones (Opcional)</label>
+                            <textarea id="observaciones" name="Observaciones" class="form-control" rows="3"></textarea>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Realizar Pedido</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Pedidos Existentes</h5>
+                </div>
+                <div class="card-body">
+                    @if (!Model.Pedidos.Any())
+                    {
+                        <div class="alert alert-warning text-center" role="alert">
+                            No hay pedidos registrados todavía.
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>ID Pedido</th>
+                                        <th>Cliente</th>
+                                        <th>Fecha</th>
+                                        <th>Estado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var pedido in Model.Pedidos)
+                                    {
+                                        <tr>
+                                            <td>@pedido.IdPedido</td>
+                                            <td>@pedido.Cliente.Nombre</td>
+                                            <td>@pedido.FechaPedido.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td>
+                                                <span class="badge @(pedido.Estado == "Pendiente" ? "bg-warning" : "bg-success")">
+                                                    @pedido.Estado
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a asp-action="DetallesPedido" asp-route-id="@pedido.IdPedido" class="btn btn-sm btn-outline-info">Ver Detalles</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('articulos-container');
+            const addButton = document.getElementById('btn-agregar-articulo');
+            const hiddenRow = container.querySelector('.articulo-row.d-none');
+
+            // Función para agregar un nuevo campo de artículo
+            addButton.addEventListener('click', function() {
+                const newRow = hiddenRow.cloneNode(true);
+                newRow.classList.remove('d-none');
+                container.appendChild(newRow);
+            });
+
+            // Función para eliminar un campo de artículo
+            container.addEventListener('click', function(e) {
+                if (e.target.classList.contains('btn-eliminar-articulo')) {
+                    e.target.closest('.articulo-row').remove();
+                }
+            });
+        });
+    </script>
+}
